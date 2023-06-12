@@ -6,7 +6,7 @@ import "./todo.css"
 
 export const TodoItem = ({title, deleteTodo}) =>{
   const [done, setDone] = useState(false);
-  const whenClicked = () => {
+  const editBtn = () => {
     setDone(!done);
   };
   return (
@@ -15,7 +15,7 @@ export const TodoItem = ({title, deleteTodo}) =>{
       <p className="todo-task-title" style={{ backgroundColor: done ? "#fc5656" : "white" }}>{title}</p>
       <img className="todo-icon" src={DeleteIcon} onClick={deleteTodo} />
     </div>
-      <img className="todo-one-icon" src={CheckIcon} onClick={whenClicked}/>
+      <img className="todo-one-icon" src={CheckIcon} onClick={editBtn}/>
     </>
   )
 }
